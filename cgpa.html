@@ -1,0 +1,224 @@
+
+<html>
+<head>
+    <style>
+        .sheet{
+            width:500px;
+            height:600px;
+            background-color: azure;
+            margin-left:500px;
+            margin-top:100px;
+        }
+        .sub{
+            text-align: center;
+            padding:80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sheet">
+        <div class="sub">
+PCD:<input type="text" id="pcd" ><br><br>
+MATHS:<input type="text" id="maths"><br><br>
+CN:<input type="text" id="cn"><br><br>
+TOC:<input type="text" id="toc"><br><br>
+AI:<input type="text" id="ai"><br><br>
+ADT:<input type="text" id="adt"><br><br>
+LAB1:<input type="textr" id="lab1"><br><br>
+LAB2:<input type="text" id="lab2"><br><br>
+LAB3:<input type="text" id="lab3"><br><br>
+CDS:<input type="text" id="cds"><br><br>
+<button onclick="fun()">Cgpa calculation</button>
+        
+            <p id="demo1"></p>
+    <p id="demo"></p>
+            </div>
+        </div>
+<script>
+    function fun(){
+        var su1=0,sub2=0,sub3=0,sub4=0,sub5=0,sub6=0,sub7=0,sub8=0,sub9=0,sum=0,mar=0;
+         var pcd=document.getElementById("pcd").value;
+        if(pcd!=""){
+                if(pcd=='o')
+                    {
+                        su1=4*10;
+                    }
+                if(pcd=='A+')
+                    {
+                        su1=4*9;
+                    }
+                if(pcd=='A')
+                    {
+                        su1=4*8;
+                    }
+                if(pcd=='B+')
+                    {
+                        su1=4*7;
+                    }
+                if(pcd=='B')
+                    {
+                        su1=4*6;
+                    }
+            var maths=document.getElementById("maths").value;
+            if(maths!='')
+                {
+                    if(maths=='o')
+                        sub2=3*10;
+                    if(maths=='A+')
+                        sub2=3*9;
+                    if(maths=='A')
+                        sub2=3*8;
+                    if(maths=='B+')
+                        sub2=3*7;
+                    if(maths=='B')
+                        sub2=3*6;
+                    var cn=document.getElementById("cn").value;
+                    if(cn!=''){
+                        if(cn=='o')
+                            sub3=3*10;
+                        if(cn=='A+')
+                            sub3=3*9;
+                        if(cn=='A')
+                            sub3=3*8;
+                        if(cn=='B+')
+                            sub3=3*7;
+                        if(cn=='B')
+                            sub3=3*6;
+                        var toc=document.getElementById("toc").value;
+                        if(toc!='')
+                            {
+                                if(toc=='o')
+                                    sub4=3*10;
+                                if(toc=='A+')
+                                    sub4=3*9;
+                                if(toc=='A')
+                                    sub4=3*8;
+                                if(toc=='B+')
+                                    sub4=3*7;
+                                if(toc=='B')
+                                    sub4=3*6;
+                                 var ai=document.getElementById("ai").value;
+                                if(ai!='')
+                                    {
+                                         if(ai=='o')
+                                            sub5=3*10;
+                                        if(ai=='A+')
+                                            sub5=3*9;
+                                        if(ai=='A')
+                                            sub5=3*8;
+                                        if(ai=='B+')
+                                            sub5=3*7;
+                                        if(ai=='B')
+                                            sub5=3*6;
+                                        var adt=document.getElementById("adt").value;
+                                        if(adt!='')
+                                            {
+                                                
+                                                  if(adt=='o')
+                                                    sub6=3*10;
+                                                if(adt=='A+')
+                                                    sub6=3*9;
+                                                if(adt=='A')
+                                                    sub6=3*8;
+                                                if(adt=='B+')
+                                                    sub6=3*7;
+                                                if(adt=='B')
+                                                    sub6=3*6;
+                                                    var lab1=document.getElementById("lab1").value;
+                                                if(lab1!='')
+                                                    {
+                                                         if(lab1=='o')
+                                                            sub7=2*10;
+                                                        if(lab1=='A+')
+                                                            sub7=2*9;
+                                                        if(lab1=='A')
+                                                            sub7=2*8;
+                                                        if(lab1=='B+')
+                                                            sub7=2*7;
+                                                        if(lab1=='B')
+                                                            sub7=2*6;
+                                                        var lab2=document.getElementById("lab2").value;
+                                                        if(lab2!='')
+                                                            {
+                                                                 if(lab2=='o')
+                                                                    sub8=2*10;
+                                                                if(lab2=='A+')
+                                                                    sub8=2*9;
+                                                                if(lab2=='A')
+                                                                    sub8=2*8;
+                                                                if(lab2=='B+')
+                                                                    sub8=2*7;
+                                                                if(lab2=='B')
+                                                                    sub8=2*6;
+                                                                 var lab3=document.getElementById("lab3").value;
+                                                                if(lab3!='')
+                                                                    {
+                                                                        if(lab3=='o')
+                                                                            sub9=2*10;
+                                                                        if(lab3=='A+')
+                                                                            sub9=2*9;
+                                                                        if(lab3=='A')
+                                                                            sub9=2*8;
+                                                                        if(lab3=='B+')
+                                                                            sub9=2*7;
+                                                                        if(lab3=='B')
+                                                                            sub9=2*6;
+                                                                         var cds=document.getElementById("cds").value;
+                                                                        if(cds=='')
+                                                                             document.getElementById("demo1").innerHTML="Enter valid  cds grade";
+                                                                        else{
+                                                                            sum=su1+sub2+sub3+sub4+sub5+sub6+sub7+sub8+sub9;
+                                                                             mar=sum/25;
+                                                                            document.getElementById("demo").innerHTML="Your Cgpa is "+mar;
+                                                                        }
+                                                                            
+                                                                    }
+                                                                else{
+                                                                    document.getElementById("demo1").innerHTML="Enter valid  lab3 grade";
+ 
+                                                                }
+
+                                                            }
+                                                        else{
+                                                            document.getElementById("demo1").innerHTML="Enter valid lab2 grade";
+ 
+                                                        }
+                                                    }
+                                                else{
+                                                    document.getElementById("demo1").innerHTML="Enter valid lab1 grade";
+                                        
+                                                }
+                                            }
+                                        else{
+                                                document.getElementById("demo1").innerHTML="Enter valid ADT grade";
+                                        }
+                                    }
+                                else{
+                                        document.getElementById("demo1").innerHTML="Enter valid AI grade";
+
+                                }
+                            }
+                        else{
+                                document.getElementById("demo1").innerHTML="Enter TOC valid grade";
+                        }
+                    }
+                     else{
+                document.getElementById("demo1").innerHTML="Enter valid CN grade";
+            }
+                 }
+            else{
+                document.getElementById("demo1").innerHTML="Enter valid MATHS grade";
+            }
+        }
+        else{
+            document.getElementById("demo1").innerHTML="Enter valid PCD grade";
+        }
+         
+  
+       
+    }
+   
+   
+    </script>
+</body>
+</html>
